@@ -26,7 +26,7 @@ export default function Cart() {
     }
   
     try {
-      let response = await fetch("http://localhost:5000/api/orderData", {
+      let response = await fetch("https://foodzy-backend-1.onrender.com/api/orderData", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ export default function Cart() {
         </table>
         <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='btn bg-info mt-5 ' onClick={handleCheckOut} > Check Out </button>
         </div>
       </div>
 

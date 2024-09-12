@@ -15,7 +15,7 @@ const onChange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/loginuser", {
+    const response = await fetch("https://foodzy-backend-1.onrender.com/api/loginuser", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
             <input type="password" className="form-control" name='password' value={credentials.password} onChange={onChange} id="exampleInputPassword1"/>
         </div>
-        <button type="submit" className="m-3 btn btn-success">Login</button>
+        <button type="submit" className="m-3 btn btn-info">Login</button>
         <Link to = '/createuser' className = 'm-3 btn btn-danger'>Sign Up</Link>
         </form>
     </div>

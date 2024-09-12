@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 const port = 5000
 const mongoDB = require('./db');
-const cors = require('cors');
+// const cors = require('cors');
 
-app.use(cors({
-  origin: ["https://foodzy-seven.vercel.app/"],
-  methods: ['GET', 'POST'],
-  credentials: true,  // <-- REQUIRED for session cookies to work properly!  // Enable CORS with credentials (cookies)
-}))
+// app.use(cors({
+//   origin: ["https://foodzy-seven.vercel.app/"],
+//   methods: ['GET', 'POST'],
+//   credentials: true,  // <-- REQUIRED for session cookies to work properly!  // Enable CORS with credentials (cookies)
+// }))
 mongoDB();
 
 app.use((req, res, next) => {

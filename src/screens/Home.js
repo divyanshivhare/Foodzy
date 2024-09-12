@@ -11,7 +11,7 @@ function Home() {
   const [foodItem, setFoodItem] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:5000/api/foodData", {
+    let response = await fetch("https://foodzy-backend-1.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

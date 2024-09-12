@@ -15,7 +15,7 @@ function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        const response = await fetch("https://foodzy-backend-1.onrender.com/api/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ function Signup() {
             <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
             <input type="address" className="form-control" name='geolocation' value={credentials.geolocation} onChange={onChange} id="exampleInputPassword1"/>
         </div>
-        <button type = 'submit' className="m-3 btn btn-success">Submit</button>
+        <button type = 'submit' className="m-3 btn btn-info">Submit</button>
         <Link to = '/login' className = 'm-3 btn btn-danger'>Already have an account</Link>
         </form>
     </div>

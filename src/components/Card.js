@@ -37,7 +37,7 @@ function Card(props) {
           <h5 className="card-title">{props.foodItem.name}</h5>
           {/* <p className="card-text">{props.foodItem.description}</p> */}
           <div className='container w-100'>
-            <select className='m-2 h-100 bg-success rounded' onChange={(e) => setQty(e.target.value)}>
+            <select className='m-2 h-100 bg-info rounded' onChange={(e) => setQty(e.target.value)}>
               {Array.from(Array(6), (e, i)=>{
                 return (
                   <option key={i+1} value={i+1}> {i+1} </option>
@@ -45,7 +45,7 @@ function Card(props) {
               })}
             </select>
 
-            <select className='m-2 h-100 bg-success rounded' ref={priceRef} onChange={(e) => setSize(e.target.value)}>
+            <select className='m-2 h-100 bg-info rounded' ref={priceRef} onChange={(e) => setSize(e.target.value)}>
               {priceOptions.map((data) => {
                 return <option key={data} value={data}>{data}</option>
               })}
@@ -55,7 +55,7 @@ function Card(props) {
             </div>
           </div>
           <hr />
-          <button className={'btn btn-success justify-center ms-2'} onClick={handleAddToCart}>Add To Cart</button>
+          <button className={'btn btn-info justify-center ms-2'} onClick={handleAddToCart}>Add To Cart</button>
         </div>
       </div>
     </div>

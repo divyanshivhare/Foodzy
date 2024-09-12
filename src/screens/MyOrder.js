@@ -8,7 +8,7 @@ function MyOrder() {
   // Memoize fetchMyOrder
   const fetchMyOrder = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/myOrderData', {
+      const response = await fetch('https://foodzy-backend-1.onrender.com/api/myOrderData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
